@@ -1,5 +1,7 @@
 <?php
 
+use App\Post;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +13,15 @@
 |
 */
 
-Route::get('/', function () 
-
-    return view('welcome');
-	
+Route::get('/', function () {
+    $posts = Post::all();
+    return view('index')->with('posts', $posts);	
 });
+
+
+Route::get('/post', function () {
+    return view('post');	
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
