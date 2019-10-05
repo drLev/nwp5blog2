@@ -17,4 +17,5 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/post/{id}', 'PostController@index')->name('post');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::post('/contact', 'ContactController@newMessage');
 Route::post('/comment', 'PostController@addComment');
