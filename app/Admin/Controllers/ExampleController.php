@@ -9,6 +9,9 @@ use Encore\Admin\Show;
 
 class ExampleController extends AdminController
 {
+    
+    
+    
     /**
      * Title for current resource.
      *
